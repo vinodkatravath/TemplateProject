@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>child1 html file</title>
+    {% extends 'TemplateApp1/base1.html'%}
+    {%load static%}
+    {% block child_css%}
+     <link rel="stylesheet" href="{%static "css/child1.css" %}">
+    {%endblock%}
+
+</head>
+<body>
+    {% block child_block %}
+     <h2>child-template specific extra-code & specific extra-css</h2>
+     <hr />
+    {% endblock %}
+</body>
+</html>
